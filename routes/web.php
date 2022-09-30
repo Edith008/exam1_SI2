@@ -23,3 +23,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //
 Route::resource('roles', App\Http\Controllers\RolController::class);
+Route::resource('clientes', App\Http\Controllers\ClienteController::class);

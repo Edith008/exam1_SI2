@@ -341,8 +341,8 @@ return [
                     'url'  => '#',
                 ],
                 [
-                    'text' => 'clientes',
-                    'url'  => 'home',
+                    'text' => 'Cliente',
+                    'url'  => 'clientes',
                 ],
             ],
         ],   
