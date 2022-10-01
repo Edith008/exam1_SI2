@@ -3,12 +3,12 @@
 @section('title', 'Servicios de Internet')
 
 @section('content_header')
-    <h1></h1>
+    <h1> </h1>
 @stop
 
-@section('content')
 
-<div class="container-fluid">
+@section('content')
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
@@ -16,12 +16,13 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                              <h1>LISTA DE ROLES</h1>
+                              
+                                <h1>LISTA DE ROUTER</h1>
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('roles.create') }}" class="btn btn-primary btn-sm " data-placement="left">
-                                  {{ __('Crear Rol') }}
+                                <a href="{{ route('routers.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                  {{ __('Nuevo Router') }}
                                 </a>
                               </div>
                         </div>
@@ -37,34 +38,32 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>N°</th>
+                                        <th>No</th>
                                         
-										<th>NOMBRE</th>
-										<th>DESCRIPCIÓN</th>
+										<th>Codigo</th>
+										<th>Marca</th>
+										<th>Descripcion</th>
 
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($rols as $rol)
+                                    @foreach ($routers as $router)
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $rol->nombre }}</td>
-											<td>{{ $rol->descripcion }}</td>
+											<td>{{ $router->codigo }}</td>
+											<td>{{ $router->marca }}</td>
+											<td>{{ $router->descripcion }}</td>
 
                                             <td>
-                                            <!-- 
-                                            Esto es un comentario
-                                             -->
-                                                <form action="{{ route('roles.destroy',$rol->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('roles.show',$rol->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('roles.edit',$rol->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                                <form action="{{ route('routers.destroy',$router->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('routers.show',$router->id) }}"><i class="fa fa-fw fa-eye"></i> ver</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('routers.edit',$router->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
-                                               
                                             </td>
                                         </tr>
                                     @endforeach
@@ -73,23 +72,8 @@
                         </div>
                     </div>
                 </div>
-                {!! $rols->links() !!}
+                {!! $routers->links() !!}
             </div>
         </div>
-    </div> 
-
-@stop
-
-
-
-
-
-
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-@section('js')
-    <script> console.log('Hi!'); </script>
-@stop
+    </div>
+@endsection

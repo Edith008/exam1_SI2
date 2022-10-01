@@ -3,14 +3,23 @@
 @section('title', 'Servicios de Internet')
 
 @section('content_header')
-    <h1>Mostrar detalle de Cliente</h1>
+    <h1></h1>
 @stop
+
 
 @section('content')
 
 <div class="card">
-    <div class="card-body">                        
-            
+    <div class="card-header">
+        <div class="float-left">
+            <h3>DETALLE DEL CLIENTE</h3>
+        </div>
+        <div class="float-right">
+            <a class="btn btn-primary" href="{{ route('clientes.index') }}"> Volver</a>
+        </div>
+    </div>
+
+    <div class="card-body">                                  
             <div class="form-group">
                 <strong>Nombre:</strong>
                 {{ $cliente->nombre }}
@@ -46,9 +55,6 @@
                 {{ $cliente->telefono }}
             </div>
 
-            <div >
-                <a class="btn btn-primary" href="{{ route('clientes.index') }}"> Volver</a>
-            </div>
 
     </div> 
 </div>

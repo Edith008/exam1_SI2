@@ -3,7 +3,7 @@
 @section('title', 'Servicios de Internet')
 
 @section('content_header')
-    <h1>Lista de Clientes</h1>
+    <h1></h1>
 @stop
 
 
@@ -15,7 +15,9 @@
                 <div class="card">
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
-
+                            <span id="card_title"> 
+                              <h2>LISTA  DE  CLIENTES</h2>
+                            </span>
 
                             <div class="float-right">
                                 <a href="{{ route('clientes.create') }}" class="btn btn-primary btn-sm " data-placement="left">

@@ -11,6 +11,9 @@
     <div class="card">
         <div class="card-body">
             @includeif('partials.errors')
+                <div class="card-header">
+                    <h3>NUEVO ROL</h3>
+                </div>
             <form method="POST" action="{{ route('roles.store') }}"  role="form"  enctype="multipart/form-data">
                 @csrf
                 @include('rol.form')
