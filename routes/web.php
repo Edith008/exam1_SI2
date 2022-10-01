@@ -29,3 +29,6 @@ Route::resource('administrativos', App\Http\Controllers\AdministrativoController
 Route::resource('tecnicos', App\Http\Controllers\TecnicoController::class);
 
 Route::resource('routers', App\Http\Controllers\RouterController::class);
+Route::resource('velocidads', App\Http\Controllers\VelocidadController::class);
+Route::resource('plans', App\Http\Controllers\PlanController::class);
+Route::resource('ciudads', App\Http\Controllers\CiudadController::class);

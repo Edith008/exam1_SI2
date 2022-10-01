@@ -292,7 +292,7 @@ return [
         // Navbar items:
         [
             'type'         => 'navbar-search',
-            'text'         => 'search',
+            'text'         => 'Busqueda',
             'topnav_right' => true,
         ],
         [
@@ -303,7 +303,7 @@ return [
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'Busqueda',
         ],
         [
             'text' => 'blog',
@@ -367,7 +367,39 @@ return [
             ],
         ], 
         
-        
+        [
+            'text'    => 'Administar',
+            'icon' => 'fas fa-fw fa-group',
+            'submenu' => [
+                [
+                'text' => 'Router',
+                'url'  => 'routers',
+                'icon' => 'fas fa-fw fa-wifi',
+                ],
+
+                [
+                    'text' => 'Velocidad mgbs',
+                    'url'  => 'velocidads',
+                    'icon' => 'fas fa-fw fa-signal',
+                //    'icon' => 'fas fa-fw fa-rss-square',
+                ],
+
+                [
+                    'text' => 'Planes',
+                    'url'  => 'plans',
+                    'icon' => 'fas fa-fw fa-bolt',
+                //    'icon' => 'fas fa-fw fa-rss-square',
+                ],
+
+                [
+                    'text' => 'Ciudades',
+                    'url'  => 'ciudads',
+                    'icon' => 'fas fa-fw fa-location-arrow',
+                ],
+
+            ],
+        ], 
+/*        
         [
             'text' => 'Router',
             'url'  => 'routers',
@@ -375,9 +407,23 @@ return [
         ],
 
         [
+            'text' => 'Velocidad mgbs',
+            'url'  => 'velocidads',
+            'icon' => 'fas fa-fw fa-wifi',
+        ],
+
+        [
+            'text' => 'Ciudades',
+            'url'  => 'ciudads',
+            'icon' => 'fas fa-fw fa-wifi',
+        ],
+*/
+        [
             'text' => 'Solicitud de servicio',
             'url'  => '#',
             'icon' => 'fas fa-fw fa-edit',
+            'label' => 'Nuevo',
+            'label_color' => 'danger',
         ],
 
         [
