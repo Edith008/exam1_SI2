@@ -31,6 +31,9 @@ class Ciudad extends Model
      */
     protected $fillable = ['nombre'];
 
-
+    public function contrato_clientes()
+    {
+         return $this->hasOne('App\Models\contrato_clientes');
+    }
 
 }

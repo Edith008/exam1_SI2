@@ -40,10 +40,17 @@ class Plan extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
+
     public function velocidad()
     {
         return $this->hasOne('App\Models\Velocidad', 'id', 'velocidad_id');
     }
+
+     //uno a uno
+     public function contrato_clientes()
+     {
+         return $this->hasOne('App\Models\contrato_clientes');
+     }
     
 
 }

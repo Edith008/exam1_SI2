@@ -35,6 +35,10 @@ class Router extends Model
      */
     protected $fillable = ['codigo','marca','descripcion'];
 
-
+    //uno a uno
+    public function contrato_clientes()
+    {
+         return $this->hasOne('App\Models\contrato_clientes');
+    }
 
 }

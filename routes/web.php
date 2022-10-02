@@ -32,3 +32,5 @@ Route::resource('routers', App\Http\Controllers\RouterController::class);
 Route::resource('velocidads', App\Http\Controllers\VelocidadController::class);
 Route::resource('plans', App\Http\Controllers\PlanController::class);
 Route::resource('ciudads', App\Http\Controllers\CiudadController::class);
+
+Route::resource('contrato-clientes', App\Http\Controllers\ContratoClienteController::class);

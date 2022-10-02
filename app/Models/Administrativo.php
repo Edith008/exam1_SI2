@@ -40,6 +40,11 @@ class Administrativo extends Model
      */
     protected $fillable = ['nombre','ci','sexo','fnacimiento','direccion','telefono'];
 
+    //uno a uno
+    public function contrato_clientes()
+    {
+        return $this->hasOne('App\Models\contrato_clientes');
+    }
 
 
 }

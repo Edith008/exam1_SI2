@@ -360,7 +360,7 @@ return [
 
                 [
                     'text' => 'Contrato-cliente',
-                    'url'  => '#',
+                    'url'  => 'contrato-clientes',
                     'icon' => 'fas fa-fw fa-file',
                 ],
 

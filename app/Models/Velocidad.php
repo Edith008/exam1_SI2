@@ -33,7 +33,8 @@ class Velocidad extends Model
 
 
     //relacion uno a muchos
-    public function plans(){
+    public function plans()
+    {
         return $this->hasOne('App\Models\plans');
     }
 
