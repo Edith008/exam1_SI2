@@ -16,7 +16,7 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                              <h1>LISTA DE ROLES</h1>
+                                {{ __('Lista de Roles') }}
                             </span>
 
                              <div class="float-right">

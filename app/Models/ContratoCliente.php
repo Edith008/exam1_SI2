@@ -38,6 +38,8 @@ class ContratoCliente extends Model
 		'plan_id' => 'required',
 		'router_id' => 'required',
 		'direccion' => 'required',
+        'latitud' => 'required',
+        'longitud' => 'required',
     ];
 
     protected $perPage = 20;
@@ -47,7 +49,7 @@ class ContratoCliente extends Model
      *
      * @var array
      */
-    protected $fillable = ['administrativo_id','cliente_id','ci','telefono','ciudad_id','plan_id','router_id','direccion'];
+    protected $fillable = ['administrativo_id','cliente_id','ci','telefono','ciudad_id','plan_id','router_id','direccion','latitud','longitud'];
 
 
     /**

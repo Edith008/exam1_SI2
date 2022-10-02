@@ -188,7 +188,8 @@ return [
     'classes_body' => '',
     'classes_brand' => '',
     'classes_brand_text' => '',
-    'classes_content_wrapper' => 'navbar-info text-dark',
+   // 'classes_content_wrapper' => 'navbar-info text-dark',
+   'classes_content_wrapper' => 'n',
     'classes_content_header' => '',
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-info elevation-4',
@@ -322,12 +323,23 @@ return [
         ['header' => 'ADMINISTRADOR'],
         
         [
-            'text' => 'Rol',
-            'url'  => 'roles',
-            //'route' => 'rols.index';  //esta linea no funciona
-            //'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user-secret',
-        ],
+        'text'    => 'User',
+            'icon' => 'fas fa-fw fa-group',
+            'submenu' => [
+                [
+                    'text' => 'Rol',
+                    'url'  => 'roles',
+                    //'route' => 'rols.index';  //esta linea no funciona
+                    //'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-user-secret',
+                ],
+                [
+                    'text' => 'Usuarios',
+                    'url'  => 'users',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+            ],
+        ],    
 
         //menu con niveles--
         [

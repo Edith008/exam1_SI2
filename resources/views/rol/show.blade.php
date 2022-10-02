@@ -8,30 +8,33 @@
 
 @section('content')
 
-<div class="card">
-    <div class="card-body">                        
-            
-          <div class="card-header">
-                <div class="float-left">
-                    <h3>DETALLE DEL ROL</h3>
+<section class="content container-fluid">
+    <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="float-left">
+                            <h7>Detalle de Rol</h7>
+                        </div>
+
+                        <div class="float-right">
+                            <a class="btn btn-primary" href="{{ route('roles.index') }}"> volver</a>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <strong>Nombre:</strong>
+                            {{ $rol->nombre }}
+                        </div>
+                        
+                        <div class="form-group">
+                            <strong>Descripcion:</strong>
+                            {{ $rol->descripcion }}
+                        </div>
+                    </div>   
                 </div>
-
-                <div class="float-right">
-                    <a class="btn btn-primary" href="{{ route('roles.index') }}"> volver</a>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <strong>Nombre:</strong>
-                {{ $rol->nombre }}
-            </div>
-            
-            <div class="form-group">
-                <strong>Descripcion:</strong>
-                {{ $rol->descripcion }}
-            </div>
-
-           
+            </div>    
     </div> 
 </div>
 

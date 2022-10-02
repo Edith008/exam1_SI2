@@ -27,6 +27,7 @@ Route::resource('roles', App\Http\Controllers\RolController::class);
 Route::resource('clientes', App\Http\Controllers\ClienteController::class);
 Route::resource('administrativos', App\Http\Controllers\AdministrativoController::class);
 Route::resource('tecnicos', App\Http\Controllers\TecnicoController::class);
+Route::resource('users', App\Http\Controllers\UserController::class);
 
 Route::resource('routers', App\Http\Controllers\RouterController::class);
 Route::resource('velocidads', App\Http\Controllers\VelocidadController::class);

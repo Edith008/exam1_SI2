@@ -1,10 +1,8 @@
 @extends('adminlte::page')
 
-@section('title', 'Servicios de Internet')
-
-@section('content_header')
-    <h1></h1>
-@stop
+@section('template_title')
+    Create User
+@endsection
 
 @section('content')
     <section class="content container-fluid">
@@ -15,18 +13,15 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title"> Contrato Cliente</span>
+                        <span class="card-title">Registar Usuario</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('contrato-clientes.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('users.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
-                            @include('contrato-cliente.form')
+                            @include('user.form')
 
                         </form>
-                        
-
-     
                     </div>
                 </div>
             </div>

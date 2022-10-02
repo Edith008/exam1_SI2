@@ -55,6 +55,14 @@
                             <strong>Direccion:</strong>
                             {{ $contratoCliente->direccion }}
                         </div>
+                        <div class="form-group">
+                            <strong>Latitud:</strong>
+                            {{ $contratoCliente->latitud }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Longitud:</strong>
+                            {{ $contratoCliente->longitud }}
+                        </div>
 
                     </div>
                 </div>
