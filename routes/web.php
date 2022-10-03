@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,6 +21,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//
+Route::get('clientes/pdf', [App\Http\Controllers\ClienteController::class, 'pdf'])->name('clientes.pdf');
+
 
 //
 Route::resource('roles', App\Http\Controllers\RolController::class);
@@ -32,6 +37,9 @@ Route::resource('users', App\Http\Controllers\UserController::class);
 Route::resource('routers', App\Http\Controllers\RouterController::class);
 Route::resource('velocidads', App\Http\Controllers\VelocidadController::class);
 Route::resource('plans', App\Http\Controllers\PlanController::class);
+Route::resource('tipo-servicios', App\Http\Controllers\TipoServicioController::class);
 Route::resource('ciudads', App\Http\Controllers\CiudadController::class);
 
 Route::resource('contrato-clientes', App\Http\Controllers\ContratoClienteController::class);
+Route::resource('solicitud-servicios', App\Http\Controllers\SolicitudServicioController::class);
+

@@ -35,6 +35,7 @@
                 {!! $errors->first('fnacimiento', '<div class="invalid-feedback">:message</div>') !!}
             </div>
             </div>
+            
             <div class="col-md-6">
             <div class="form-group">
                 {{ Form::label('direccion') }}

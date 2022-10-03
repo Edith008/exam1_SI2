@@ -48,7 +48,7 @@ class AdministrativoController extends Controller
         $administrativo = Administrativo::create($request->all());
 
         return redirect()->route('administrativos.index')
-            ->with('success', 'Administrativo created successfully.');
+            ->with('success', 'Administrativo creado con exito!.');
     }
 
     /**
@@ -91,7 +91,7 @@ class AdministrativoController extends Controller
         $administrativo->update($request->all());
 
         return redirect()->route('administrativos.index')
-            ->with('success', 'Administrativo updated successfully');
+            ->with('success', 'Administrativo actualizado con exito!');
     }
 
     /**
@@ -104,6 +104,6 @@ class AdministrativoController extends Controller
         $administrativo = Administrativo::find($id)->delete();
 
         return redirect()->route('administrativos.index')
-            ->with('success', 'Administrativo deleted successfully');
+            ->with('success', 'Administrativo eliminado con exito!');
     }
 }

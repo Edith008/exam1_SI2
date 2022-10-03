@@ -27,9 +27,16 @@ class Cliente extends Model
     protected $fillable = ['nombre','ci','sexo','fnacimiento','direccion','email','telefono'];
 
      //uno a uno
+
      public function contrato_clientes()
      {
          return $this->hasOne('App\Models\contrato_clientes');
+     }
+
+     //
+     public function solicitud_servicios()
+     {
+         return $this->hasOne('App\Models\solicitud_servicios');
      }
      
 }

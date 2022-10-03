@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+//
 use App\Models\Cliente;
+use PDF;
+use Carbon\carbon;
 
 class ClienteController extends Controller
 {
@@ -19,6 +22,30 @@ class ClienteController extends Controller
         return view('cliente.index', compact('clientes'))
             ->with('i', (request()->input('page', 1) - 1) * $clientes->perPage());
     }
+
+    //
+    public function pdf(Request $request)
+    {
+       // $TiempoActual = Carbon::now();
+       // $hora = $TiempoActual->toTimeString();
+       // $fecha = $TiempoActual->format('d-m-Y');
+       
+
+       
+//        $pdf = PDF::loadView('chofere.pdf',['choferes'=>$choferes],compact('hora','fecha','choferes'));
+//        return $pdf->download('_choferes.pdf');
+
+       $clientes = Cliente::paginate();
+
+       $pdf = PDF::loadView('cliente.pdf',['clientes'=>$clientes]);
+        //$pdf->loadHTML('<h1> test </h1>');
+         return $pdf->stream();
+        
+//        return $pdf->download('_choferes.pdf');
+
+        //return view('chofere.pdf', compact('choferes'));   
+    }
+
 
     /**
      * Show the form for creating a new resource.

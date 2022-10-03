@@ -20,6 +20,10 @@
                             </span>
 
                             <div class="float-right">
+                                <a href="{{ route('clientes.pdf') }}" class="btn btn-primary btn-sm "  data-placement="left">
+                                  {{ __('Generar PDF') }}
+                                </a>
+&nbsp;
                                 <a href="{{ route('clientes.create') }}" class="btn btn-primary btn-sm " data-placement="left">
                                   {{ __('Registar Cliente') }}
                                 </a>

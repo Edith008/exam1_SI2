@@ -395,14 +395,17 @@ return [
                     'icon' => 'fas fa-fw fa-signal',
                 //    'icon' => 'fas fa-fw fa-rss-square',
                 ],
-
                 [
                     'text' => 'Planes',
                     'url'  => 'plans',
                     'icon' => 'fas fa-fw fa-bolt',
                 //    'icon' => 'fas fa-fw fa-rss-square',
                 ],
-
+                [
+                    'text' => 'Tipo de Servicios',
+                    'url'  => 'tipo-servicios',
+                    'icon' => 'fas fa-fw fa-check',
+                ],
                 [
                     'text' => 'Ciudades',
                     'url'  => 'ciudads',
@@ -432,7 +435,7 @@ return [
 */
         [
             'text' => 'Solicitud de servicio',
-            'url'  => '#',
+            'url'  => 'solicitud-servicios',
             'icon' => 'fas fa-fw fa-edit',
             'label' => 'Nuevo',
             'label_color' => 'danger',
@@ -447,7 +450,8 @@ return [
         [
             'text' => 'Asistencia',
             'url'  => '#',
-            'icon' => 'fas fa-fw fa-check',
+            'icon' => 'fas fa-fw fa-calendar',
+            //check
         ],
 
 /*
