@@ -37,8 +37,8 @@ class SolicitudServicioController extends Controller
     {
         $TiempoActual = Carbon::now();
         $hora = $TiempoActual->toTimeString();
-        $fecha = $TiempoActual->format('d-m-Y');
-        //$fecha = $TiempoActual->toDateString();
+        $fecha = $TiempoActual->format('Y-m-d');
+       // $fecha = $TiempoActual->toDateString();
 
 
 
