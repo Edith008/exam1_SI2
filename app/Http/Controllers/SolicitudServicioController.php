@@ -86,11 +86,16 @@ class SolicitudServicioController extends Controller
      */
     public function edit($id)
     {
+
+        $TiempoActual = Carbon::now();
+        $hora = $TiempoActual->toTimeString();
+        $fecha = $TiempoActual->format('Y-m-d');
+
         $solicitudServicio = SolicitudServicio::find($id);
         $clien = Cliente::pluck('nombre','id');
         $tserv = TipoServicio::pluck('nombre','id');
 
-        return view('solicitud-servicio.edit', compact('solicitudServicio','clien', 'tserv'));
+        return view('solicitud-servicio.edit', compact('solicitudServicio','clien', 'tserv','hora','fecha'));
     }
 
     /**
