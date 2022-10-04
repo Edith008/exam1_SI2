@@ -3,7 +3,7 @@
         
         <div class="form-group">
             {{ Form::label('administrativo') }}
-            {{ Form::select('administrativo_id',$administra, $contratoCliente->administrativo_id, ['class' => 'form-control' . ($errors->has('administrativo_id') ? ' is-invalid' : ''), 'placeholder' => 'Administrativo ']) }}
+            {{ Form::text('administrativo_id', $contratoCliente->administrativo_id, ['class' => 'form-control' . ($errors->has('administrativo_id') ? ' is-invalid' : ''), 'Value' => Auth::user()->id, 'readonly']) }}
             {!! $errors->first('administrativo_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

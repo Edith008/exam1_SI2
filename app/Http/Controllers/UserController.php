@@ -7,6 +7,8 @@ use App\Models\Rol;
 use App\Models\Administrativo;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Hash;
+
 /**
  * Class UserController
  * @package App\Http\Controllers
@@ -55,7 +57,7 @@ class UserController extends Controller
         //
         $user = User::create([
             'rol_id' => $request['rol_id'],
-            'empleado_id' => $request['empleado_id'],
+            'administrativo_id' => $request['administrativo_id'],
             'email' => $request['email'],
             'password' => Hash::make($request['password']),
         ]);

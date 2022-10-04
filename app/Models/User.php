@@ -29,6 +29,8 @@ class User extends Authenticatable
     protected $perPage = 20;
     //
     protected $fillable = [
+        'rol_id',
+        'administrativo_id',
         'email',
         'password',
     ];
